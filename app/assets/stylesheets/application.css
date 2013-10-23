@@ -18,8 +18,26 @@
 	font-size: 16px;
 	font-family: cursive;
 	color: blue;
+	background-image: url('line.png');
 }
 body{
 	height:750px;
 	max-height: 750px;
+}
+.layout_header{
+	width:100%;
+	background-color: grey;
+	height: 25px;
+	position: fixed;
+}
+.layout_footer{
+	width:100%;
+	background-color: grey;
+	height: 25px;
+	position: fixed;
+	bottom: 0px;
+}
+*{
+	margin: 0px;
+	padding: 0px;
 }
