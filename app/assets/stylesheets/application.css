@@ -19,6 +19,7 @@
 	font-family: cursive;
 	color: blue;
 	background-image: url('line.png');
+	margin-top: 20px;
 }
 body{
 	height:750px;
@@ -40,4 +41,14 @@ body{
 *{
 	margin: 0px;
 	padding: 0px;
+}
+li.layout_footer_links{
+	float: left;
+	cursor: pointer;
+	list-style-type: none;
+	padding: 0px 5px;
+}
+li.layout_footer_links:hover{
+	background-color: #000;
+	color: grey;
 }

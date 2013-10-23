@@ -11,3 +11,29 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require_tree .
+jQuery('document').ready(function(){
+	associate_links();
+});
+
+function associate_links () {
+	jQuery('#save_li').live('click',function(e){
+		e.preventDefault();
+	    	jQuery.ajax({
+	        url: '/save_post',
+	        type : 'POST',
+	        data:{
+	        	entry_text: jQuery('#entry_text').val()
+	        },
+	        success: function(data) {
+	        	alert(data);
+	        },
+	        failure: function(error){
+			alert(error);
+	        },
+	        error: function(error){
+	        	alert(error);
+	        },
+	        async:   false
+	    });
+	});
+}
