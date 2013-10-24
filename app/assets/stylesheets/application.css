@@ -30,6 +30,7 @@ body{
 	background-color: grey;
 	height: 25px;
 	position: fixed;
+	z-index: 101;
 }
 .layout_footer{
 	width:100%;
@@ -52,3 +53,198 @@ li.layout_footer_links:hover{
 	background-color: #000;
 	color: grey;
 }
+.flash{
+	position: fixed;
+	top:0px;
+	left: 25%;
+	width: 50%;
+	background-color: #FFCC99;
+	color: #330000;
+	height: 20px;
+	z-index: 99;
+	text-align: center;
+	display: none;
+	border-radius: 0 0 3px 3px;
+}
+.welcome_span{
+	float: right;
+}
+.gateway_div{
+	position: fixed;
+	top:10%;
+	left: 25%;
+	width: 60%;
+	background-color: #FFFFFF;
+	color: #330000;
+	height: auto;
+	z-index: 101;
+	border-radius: 25px;	
+	border: 4px double black;
+	max-width:50%;
+	overflow: hidden;
+}
+.shutter{
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	opacity: 0.6;
+	background-color: black; 
+	z-index: 100;
+}
+
+.shadow {
+	-moz-box-shadow:0px 5px 5px 0px #999;/* Firefox */
+	-webkit-box-shadow:0px 5px 5px 0px #999;/* Safari and Chrome */
+	box-shadow:0px 5px 5px 0px #999;
+}
+/*Gateway CSS begins here*/
+ /*
+@font-face { 
+ font-family:PTN77F-webfont ; src: url('fonts/PTN77F-webfont.ttf'); 
+ }
+ 
+ @font-face { 
+ font-family: PTN57F-webfont; src: url('fonts/PTN57F-webfont.ttf'); 
+ }*/
+
+
+
+/* Initializing all values for body*/
+/*
+.body{
+	margin:0;
+	padding:0;	
+	background-color: #ddd;
+}
+*/
+/* Common styles for Container and mainheader */
+/* @media screen and (min-width: 650px) {
+.mainheader, .container{
+	width:100%;
+	}
+}
+*/
+/*.logo_div,.main_content{
+	-moz-box-shadow:0px 5px 5px 0px #999;
+	-webkit-box-shadow:0px 5px 5px 0px #999;
+	box-shadow:0px 5px 5px 0px #999;
+}
+
+.logo_div{
+	background-color:#FFDAB9;
+	max-width:100%;
+	width:100%;
+	float:left;
+	border-radius: 0px 0px 10px 10px;
+}*/
+
+/* Styles for diary */
+/*
+.diary{
+	text-transform:uppercase;
+	font-family:Keter YG;
+	font-size:30px;
+	font-weight: bolder;
+	letter-spacing:3px;
+	float:left;
+	padding-left:3%;
+	padding-top: 10px;
+	color:#E9967A;
+	text-shadow: -4px -2px 0px #fff;
+}
+*/
+/* Styles for main_content*/
+/*
+.main_content{
+	float:left;
+	position:relative;
+	left:25%;
+	margin-top:5%;
+	max-width:50%;
+	width:50%;
+	height:auto;
+	border:1px solid;
+	border-radius:5px;
+	background-color: #fff;
+}*/
+
+.login_head{
+	height:25px;
+	background-color:grey;
+	padding:10px;
+	/*border-radius: 5px 5px 0px 0px;*/
+}
+
+.signs{
+	font-family:PTN77F-webfont;
+	font-size:16px;
+	color: black;
+	padding: 0px 10px;
+	float: left;
+	height:35px;
+	border-radius: 5px 5px 0px 0px;
+	padding-top: 5px;
+	cursor: default;
+}
+
+.sign_unselected:hover{
+	text-shadow:1px -1px 1px #000;
+	cursor: pointer;
+}
+.sign_unselected{
+	color:blue;
+	text-decoration: underline;
+}
+.sign_selected{
+	background-color: white;
+}
+.login_content{
+	padding: 20px;
+}
+
+.login_labels{
+	padding-right:20px;
+	font-family: PTN57F-webfont;
+	font-size: 25px;
+	text-align: left;
+}
+.login_texts{
+	text-align: right;	
+}
+
+.textbox,.name,.confirm_password{
+	font-size:16px;
+	padding: 10px;
+	border:1px solid;
+	width:40%;
+	text-align: right;
+}
+
+.signin,.signup{
+	font-family:PTN77F-webfont;
+	font-size:20px;
+	text-transform:uppercase;
+	color: #E9967A;
+	background-color:#FFDAB1;
+	padding: 5px 10px;
+	border:none;
+	border-radius: 5px;
+}
+
+.signin:hover,.signup:hover{
+	cursor:pointer;
+	background-color:#FFDAB9;
+	border:1px solid;
+	border-radius: 5px;
+}
+
+.sign_ups{
+	display:none;
+}
+.login_labels *{
+	width: 120px;
+}
+
+/*Gateway CSS ends here*/

@@ -1,1 +1,2 @@
-<textarea id = "entry_text" class = "entry_text"><%= @post.entry_text if @post %></textarea>
+<textarea id = "entry_text" class = "entry_text" saved_data = "<%= @post.entry_text if @post %>"><%= @post.entry_text if @post %></textarea>
+<input type="hidden" id="logged_in_user_id" value="<%= @user.id if @user %>"/>

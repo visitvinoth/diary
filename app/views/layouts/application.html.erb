@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<span id = "flash_tag" class = "flash"></span>
+<div id="gateway_div" class="gateway_div">
+	<%= render :partial => "shared/gateway.html.erb" %>
+</div>
+<div id="shutter" class="shutter"></div>
 <div class="layout_header">
 	Diary
+	<span class = "welcome_span"><%= welcome_message %></span>
 </div>
 <%= yield %>
 <div class="layout_footer">
