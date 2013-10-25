@@ -18,11 +18,14 @@ jQuery('document').ready(function(){
     associateLinks();
     triggerAutoSave();
     loginCheck();
+    showFlashes();
 });
 
 function associateLinks () {
     associateSaveLink();
     associateSignLinks();
+    // associateSignUpLink();
+    // associateSignInLink();
     // associateOldEntriesLink();
 }
 
@@ -32,6 +35,59 @@ function associateSaveLink(){
 	    	savePost();
 	});
 }
+// function associateSignUpLink(){
+//     jQuery('#signup').live('click',function(e){
+//         e.preventDefault();
+//         jQuery.ajax({
+//             url: '/sign_up',
+//             type : 'POST',
+//             data:{
+//                 name: jQuery('#name').val(),
+//                 email: jQuery('#email').val(),
+//                 password: jQuery('#password').val()
+//             },
+//             success: function(data) {
+//                 if (data.redirect) {
+//                     window.location.href = data.redirect;
+//                 }
+//             },
+//             failure: function(error){
+//                 flash(error);
+//             },
+//             error: function(error){
+//                 flash(error);
+//             },
+//             async:   false
+//         });
+//     });
+// }
+
+// function associateSignInLink(){
+//     jQuery('#signin').live('click',function(e){
+//         e.preventDefault();
+//         jQuery.ajax({
+//             url: '/sign_in',
+//             type : 'POST',
+//             data:{
+//                 email: jQuery('#email').val(),
+//                 password: jQuery('#password').val()
+//             },
+//             success: function(data) {
+//                 if (data.redirect) {
+//                     window.location.href = data.redirect;
+//                 }
+//             },
+//             failure: function(error){
+//                 flash(error);
+//             },
+//             error: function(error){
+//                 flash(error);
+//             },
+//             async:   false
+//         });
+//     });
+// }
+
 function associateSignLinks(){
     jQuery('.sign_in').live('click',function(e){
         e.preventDefault();
@@ -99,5 +155,13 @@ function loginCheck () {
     if(jQuery('#logged_in_user_id').val() != ''){
         jQuery('#gateway_div').hide();
         jQuery('#shutter').hide();
+    }
+}
+
+function showFlashes () {
+    if (jQuery('#flash_notice').size()>0) {
+        flash(jQuery('#flash_notice').val());
+    } else if (jQuery('#flash_error').size()>0) {
+        flash(jQuery('#flash_error').val());
     }
 }

@@ -3,6 +3,7 @@ Diary::Application.routes.draw do
   # first created -> highest priority.
   match '/home' => 'application#home'
   match '/save_post' => 'application#save_post'
+  match '/enter' => 'application#enter'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

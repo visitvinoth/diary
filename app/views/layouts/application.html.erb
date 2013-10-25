@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= show_fash.html_safe %>
 <span id = "flash_tag" class = "flash"></span>
 <div id="gateway_div" class="gateway_div">
 	<%= render :partial => "shared/gateway.html.erb" %>
