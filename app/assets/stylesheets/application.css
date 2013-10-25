@@ -61,7 +61,7 @@ li.layout_footer_links:hover{
 	background-color: #FFCC99;
 	color: #330000;
 	height: 20px;
-	z-index: 99;
+	z-index: 105;
 	text-align: center;
 	display: none;
 	border-radius: 0 0 3px 3px;
@@ -84,8 +84,8 @@ li.layout_footer_links:hover{
 	overflow: hidden;
 }
 .shutter{
-	width:100%;
-	height:100%;
+	width:200%;
+	height:200%;
 	position: absolute;
 	top:0px;
 	left: 0px;
@@ -187,6 +187,7 @@ li.layout_footer_links:hover{
 	border-radius: 5px 5px 0px 0px;
 	padding-top: 5px;
 	cursor: default;
+	margin-top: 5px;
 }
 
 .sign_unselected:hover{
@@ -225,18 +226,21 @@ li.layout_footer_links:hover{
 .signin,.signup{
 	font-family:PTN77F-webfont;
 	font-size:20px;
-	text-transform:uppercase;
-	color: #E9967A;
+/*	color: #E9967A;
 	background-color:#FFDAB1;
-	padding: 5px 10px;
+*/	padding: 5px 10px;
 	border:none;
 	border-radius: 5px;
+	border: 2px solid black;
 }
 
 .signin:hover,.signup:hover{
 	cursor:pointer;
-	background-color:#FFDAB9;
-	border:1px solid;
+	/*background-color:#FFDAB9;*/
+	-moz-box-shadow:0px 5px 5px 0px #999;/* Firefox */
+	-webkit-box-shadow:0px 5px 5px 0px #999;/* Safari and Chrome */
+	box-shadow:0px 5px 5px 0px #999;
+
 	border-radius: 5px;
 }
 
