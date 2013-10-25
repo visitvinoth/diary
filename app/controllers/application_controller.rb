@@ -1,4 +1,3 @@
-require 'securerandom'
  require 'bcrypt'
 class ApplicationController < ActionController::Base
 
