@@ -34,6 +34,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
+  def exit
+    session[:user_id] = nil
+    render_home_with_message_and_return("Successfully signed out!!")
+  end
+
   def save_post
     if @user
       	if @post

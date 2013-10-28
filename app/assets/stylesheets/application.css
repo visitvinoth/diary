@@ -252,3 +252,16 @@ li.layout_footer_links:hover{
 }
 
 /*Gateway CSS ends here*/
+#edit_profile_div{
+	position: fixed;
+	top:20px;
+	width: 150px;
+	height: auto;
+	right: 0px;
+	background-color: grey;
+	display: none;
+	border: 1px solid black;
+}
+#user_name_link{
+	cursor: pointer;
+}

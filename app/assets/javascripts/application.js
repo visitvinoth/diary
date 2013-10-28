@@ -24,9 +24,17 @@ jQuery('document').ready(function(){
 function associateLinks () {
     associateSaveLink();
     associateSignLinks();
+    associateUserSnapshot();
     // associateSignUpLink();
     // associateSignInLink();
     // associateOldEntriesLink();
+}
+
+function associateUserSnapshot(){
+    jQuery('#user_name_link').live('click',function(e){
+        e.preventDefault();
+        toggleEditProfile();
+    });
 }
 
 function associateSaveLink(){
@@ -87,6 +95,11 @@ function associateSaveLink(){
 //         });
 //     });
 // }
+// jQuery.ajaxSetup({
+//   headers: {
+//     'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+//   }
+// });
 
 function associateSignLinks(){
     jQuery('.sign_in').live('click',function(e){
@@ -112,6 +125,7 @@ function savePost () {
     flash('Saving...');
     jQuery.ajax({
         url: '/save_post',
+        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
         type : 'POST',
         data:{
         	entry_text: jQuery('#entry_text').val()
@@ -164,4 +178,8 @@ function showFlashes () {
     } else if (jQuery('#flash_error').size()>0) {
         flash(jQuery('#flash_error').val());
     }
+}
+
+function toggleEditProfile () {
+    jQuery('#edit_profile_div').slideToggle();
 }

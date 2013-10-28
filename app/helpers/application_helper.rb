@@ -3,10 +3,14 @@ module ApplicationHelper
 	def welcome_message
 		user = current_user
 		if user
-			"Welcome #{user.name}!!"
+			"<span id = 'user_name_link'> Welcome #{user.name}!! </span>".html_safe
 		else
 			"Welcome to Diary!!!"
 		end
+	end
+
+	def edit_profile_contents 
+		"<a href = '/exit'>Sign out </a>".html_safe
 	end
 
 	def show_fash
