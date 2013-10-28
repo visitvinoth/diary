@@ -51,6 +51,7 @@ GEM
     mime-types (1.25)
     multi_json (1.8.2)
     mysql2 (0.3.13)
+    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
@@ -67,6 +68,11 @@ GEM
       activesupport (= 3.2.12)
       bundler (~> 1.0)
       railties (= 3.2.12)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.1)
+    rails_stdout_logging (0.0.3)
     railties (3.2.12)
       actionpack (= 3.2.12)
       activesupport (= 3.2.12)
@@ -104,6 +110,8 @@ DEPENDENCIES
   bcrypt-ruby
   coffee-rails (~> 3.2.1)
   mysql2
+  pg (= 0.15.1)
   rails (= 3.2.12)
+  rails_12factor (= 0.0.2)
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
